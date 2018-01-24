@@ -1,0 +1,16 @@
+parameters:
+    m12u.twig_extensions.ucwords.class: M12U\Bundle\TwigExtensionsBundle\Twig\UcWordsExtension
+    m12u.twig_extensions.ucfirst.class: M12U\Bundle\TwigExtensionsBundle\Twig\UcFirstExtension
+
+services:
+    m12u.twig_extension.ucwords:
+        class: '%m12u.twig_extensions.ucwords.class%'
+        public: false
+        tags:
+            - {name: twig.extension}
+
+    m12u.twig_extension.ucfirst:
+        class: '%m12u.twig_extensions.ucfirst.class%'
+        public: false
+        tags:
+            - {name: twig.extension}
